@@ -1,0 +1,17 @@
+geopandas
+mplleaflet
+bs4
+geocoder
+geopy
+folium
+lxml
+pygeoj
+pyshp
+datetime
+seaborn
+statsmodels
+descartes
+requests
+pandana
+xgboost
+
