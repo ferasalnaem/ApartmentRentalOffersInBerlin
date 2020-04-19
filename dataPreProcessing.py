@@ -70,8 +70,19 @@ df = df[df["regio2"]=="Berlin"]
 df = df.sort_values(by=['totalRent'])
 df = df.reset_index(drop=True)
 
+#filter some columns between specific amount of values
+df = df.query("totalRent >= 100").query("totalRent<10000")
+df = df.query("baseRent >= 100").query("baseRent<10000")
+df = df.query("livingSpace >= 10").query("livingSpace<500")
+df = df.query("noRooms >= 0").query("noRooms<15")
+
+
+
+
 # Replacing columns with f/t with 0/1
 df.replace({False: 0, True: 1}, inplace=True)
+
+
 
 # Plotting the distribution of numerical and boolean categories
 df.hist(figsize=(20,20));
